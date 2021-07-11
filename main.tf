@@ -12,7 +12,7 @@ provider "azurerm" {
 
 resource "azurerm_resource_group" "main" {
   name     = "hackaton-demo"
-  location = "West Europe"
+  location = "South Central US"
 }
 
 resource "azurerm_virtual_network" "main" {
@@ -70,6 +70,7 @@ resource "azurerm_virtual_machine" "main" {
     computer_name  = "hostname"
     admin_username = "testadmin"
     admin_password = "Password1234!"
+    #custom_data = file()
   }
   os_profile_linux_config {
     disable_password_authentication = false
